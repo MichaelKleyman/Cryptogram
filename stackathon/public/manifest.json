@@ -1,0 +1,16 @@
+{
+  "short_name": "Crypto Coin Search",
+  "name": "Crypto Coin Search",
+  "icons": [
+    {
+      "src": "images/images-1.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "maskable any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

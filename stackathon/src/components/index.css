@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+.app {
+  flex: 1;
+  overflow: scroll;
+}
+
+.title {
+  color: white;
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  background-color: black;
+  padding: 1.5rem;
+}
+
+.navbar-link {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav-container {
+  margin: 0;
+}
+
+.mainpage-coins h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mainpage-coins {
+  padding-bottom: 7rem;
+}
+
+.coin .link {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  gap: 60px;
+  width: 70%;
+}
+
+.coin span {
+  display: block;
+}
+
+.coin {
+  display: flex;
+}
+
+.coin-name {
+  flex: 1;
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+.coin-image {
+  width: 150px;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.usd {
+  font-size: 1.8rem;
+  color: lightblue;
+}
+
+.btc {
+  font-size: 1.3rem;
+}
+
+.bitcoin-img {
+  height: 25px;
+  display: inline;
+  padding-right: 5px;
+}
+
+.coin-img {
+  margin: auto;
+}
+
+.graph {
+  height: 300px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.width {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 92%;
+}
+
+.coin-info {
+  padding: 40px 0 60px 0;
+}
+
+.coin-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px white solid;
+  padding: 1rem 0;
+}
