@@ -57,12 +57,13 @@ html {
   padding-bottom: 7rem;
 }
 
-.coin .link {
+.link {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   margin: auto;
   padding: 20px 0;
-  border-bottom: 1px solid #ddd;
   gap: 60px;
   width: 70%;
 }
@@ -73,6 +74,12 @@ html {
 
 .coin {
   display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  gap: 60px;
+  width: 70%;
 }
 
 .coin-name {
