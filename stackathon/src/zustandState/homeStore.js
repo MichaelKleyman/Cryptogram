@@ -22,6 +22,9 @@ export const homeStore = create((set) => ({
   trendingCoins: [],
   query: '',
   searching: false,
+  clearSearchBar: () => {
+    homeStore.getState.handleSubmit();
+  },
   handleChange: (e) => {
     set({ query: e.target.value });
     homeStore.getState().handleSubmit();
@@ -60,11 +63,10 @@ export const homeStore = create((set) => ({
         name: coin.item.name,
         image: coin.item.large,
         id: coin.item.id,
-        priceBTC: (coin.item.price_btc).toFixed(10),
+        priceBTC: coin.item.price_btc.toFixed(10),
         priceUSD: (coin.item.price_btc * btc).toFixed(6),
       };
     });
-    console.log(coins); 
     set({ coins, trendingCoins: coins });
   },
 }));

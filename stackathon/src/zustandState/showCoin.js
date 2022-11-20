@@ -32,11 +32,19 @@ export const showStore = create((set) => ({
     console.log(dataRes);
     set({ dataRes: dataRes.data });
     set({ coinImage: dataRes.data.image.large });
-    set({ '24hHigh': dataRes.data.market_data.high_24h.usd });
-    set({ '24hLow': dataRes.data.market_data.low_24h.usd });
-    set({circulatingSupply: dataRes.data.market_data.circulating_supply.toLocaleString()});
-    set({currentPrice: dataRes.data.market_data.current_price.usd})
-    set({oneYearChange: dataRes.data.market_data.price_change_percentage_1y.toFixed(2)})
+    set({ '24hHigh': dataRes.data.market_data.high_24h.usd.toLocaleString() });
+    set({ '24hLow': dataRes.data.market_data.low_24h.usd.toLocaleString() });
+    set({
+      circulatingSupply:
+        dataRes.data.market_data.circulating_supply.toLocaleString(),
+    });
+    set({
+      currentPrice: dataRes.data.market_data.current_price.usd.toLocaleString(),
+    });
+    set({
+      oneYearChange:
+        dataRes.data.market_data.price_change_percentage_1y.toFixed(2),
+    });
     set({ coinData });
   },
 }));

@@ -7,21 +7,27 @@ const CoinItem = ({ coin }) => {
     <div className='coin'>
       <Link to={`/${coin.id}`} className='link'>
         <span className='coin-image'>
-          <img src={coin.image} width='160' height='160' alt='coin'/>
+          <img src={coin.image} width='160' height='160' alt='coin' />
         </span>
         <span className='coin-name'> {coin.name}</span>
         <span className='coin-price'>
-          <span className='usd'>${coin.priceBTC} USD</span>
-          <span className='btc'>
-            <img
-              src='/bitcoin.webp'
-              className='bitcoin-img'
-              width='30'
-              height='60'
-              alt='bitcoin'
-            />
-            {coin.priceUSD} BTC
-          </span>
+          {coin.priceBTC ? (
+            <span className='usd'>${coin.priceBTC} USD</span>
+          ) : (
+            <span className='usd'>Click on me</span>
+          )}
+          {coin.priceBTC ? (
+            <span className='btc'>
+              <img
+                src='/bitcoin.webp'
+                className='bitcoin-img'
+                width='30'
+                height='60'
+                alt='bitcoin'
+              />
+              ${coin.priceUSD} BTC
+            </span>
+          ) : null}
         </span>
       </Link>
     </div>

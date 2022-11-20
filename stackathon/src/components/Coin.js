@@ -16,7 +16,7 @@ const Coin = () => {
 
   return (
     <div>
-      <Link to='/home'>
+      <Link to='/'>
         <svg xmlns='http://www.w3.org/2000/svg' width='54' viewBox='0 0 48 48'>
           <path
             fill='white'
@@ -25,7 +25,13 @@ const Coin = () => {
         </svg>
       </Link>
       <header>
-        <img src={store.coinImage} className='coin-img' width='160' height='160' alt='coin'/>
+        <img
+          src={store.coinImage}
+          className='coin-img'
+          width='160'
+          height='160'
+          alt='coin'
+        />
         <h2 style={{ color: 'white' }} className='title'>
           {store.dataRes.name} ({store.dataRes.symbol})
         </h2>

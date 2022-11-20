@@ -5,7 +5,7 @@ import Coin from './Coin';
 
 const Routes = () => {
   let routes = useRoutes([
-    { path: '/home', element: <Home /> },
+    { path: '/', element: <Home /> },
     { path: '/:id', element: <Coin /> },
   ]);
 

@@ -6,8 +6,10 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { homeStore } from '../zustandState/homeStore';
 
 const NavbarComp = () => {
+  const store = homeStore();
   return (
     <div>
       <Navbar bg='dark' variant={'dark'} expand='lg'>
@@ -16,7 +18,12 @@ const NavbarComp = () => {
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='me-auto'>
-              <Nav.Link as={Link} to='/home' className='navbar-link'>
+              <Nav.Link
+                as={Link}
+                to='/'
+                className='navbar-link'
+                onClick={store.clearSearchBar}
+              >
                 Home
               </Nav.Link>
               {/* <Nav.Link as={Link} to='/genres'>
