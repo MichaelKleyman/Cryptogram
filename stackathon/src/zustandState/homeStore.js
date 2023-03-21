@@ -63,8 +63,8 @@ export const homeStore = create((set) => ({
         name: coin.item.name,
         image: coin.item.large,
         id: coin.item.id,
-        priceBTC: coin.item.price_btc.toFixed(10),
-        priceUSD: (coin.item.price_btc * btc).toFixed(6),
+        priceBTC: coin.item.price_btc?.toFixed(10),
+        priceUSD: (coin.item.price_btc * btc)?.toFixed(6),
       };
     });
     set({ coins, trendingCoins: coins });
